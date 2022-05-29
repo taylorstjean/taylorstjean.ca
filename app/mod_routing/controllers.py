@@ -2,7 +2,7 @@ from flask import redirect, Blueprint, render_template, send_from_directory, cur
 
 mod_routing = Blueprint('routing', __name__)
 
-@mod_routing.route('/robots.txt', methods=["GET", "POST"])
+@mod_routing.route('/robots.txt')
 def static_from_root():
     return send_from_directory(current_app.static_folder, request.path[1:])
 
