@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask
 
 app = Flask(__name__, static_folder='static')
+
+app.config.from_pyfile('config.py')
 
 from app.mod_routing.controllers import mod_routing as routing_module
 
