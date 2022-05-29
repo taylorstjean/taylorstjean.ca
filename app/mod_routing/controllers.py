@@ -1,10 +1,10 @@
-from flask import redirect, Blueprint, render_template, send_file
+from flask import redirect, Blueprint, render_template, send_from_directory
 
 mod_routing = Blueprint('routing', __name__)
 
-@mod_routing.route('/robots.txt', methods=["GET"])
+@mod_routing.route('/robots.txt', methods=["GET", "POST"])
 def data():
-    return send_file('web/robots.txt')
+    return send_from_directory('static', 'web/robots.txt')
 
 @mod_routing.route('/', methods=["GET", "POST"])
 def redirect_to_landing():
@@ -26,6 +26,6 @@ def education_page():
 def experience_page():
     return render_template("mod_routing/experience.html")
 
-@mod_routing.route('/download/resume/', methods=['GET'])
+@mod_routing.route('/download/resume/', methods=["GET", "POST"])
 def download_resume():
-    return send_file('files/taylorstjean_resume.pdf', as_attachment=True)
+    return send_from_directory('static', 'files/taylorstjean_resume.pdf', as_attachment=True)
