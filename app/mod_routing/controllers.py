@@ -4,7 +4,7 @@ mod_routing = Blueprint('routing', __name__)
 
 @mod_routing.route('/robots.txt', methods=["GET", "POST"])
 def data():
-    return send_file('static/data/robots.txt')
+    return send_file('static/web/robots.txt')
 
 @mod_routing.route('/', methods=["GET", "POST"])
 def redirect_to_landing():
