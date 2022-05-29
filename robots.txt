@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /static/img
-Disallow: /static/files
