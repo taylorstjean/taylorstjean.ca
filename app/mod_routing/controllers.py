@@ -3,6 +3,10 @@ from flask import redirect, Blueprint, render_template, send_file
 mod_routing = Blueprint('routing', __name__)
 
 @mod_routing.route('/', methods=["GET", "POST"])
+def robots():
+    return render_template("mod_routing/robots.txt")
+
+@mod_routing.route('/', methods=["GET", "POST"])
 def redirect_to_landing():
     return redirect('/home/', 301)
 
