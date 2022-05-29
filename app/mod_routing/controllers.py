@@ -4,7 +4,7 @@ mod_routing = Blueprint('routing', __name__)
 
 @mod_routing.route('/robots.txt', methods=["GET", "POST"])
 def data():
-    return send_file('web/robots.txt')
+    return send_file('static/web/robots.txt')
 
 @mod_routing.route('/', methods=["GET", "POST"])
 def redirect_to_landing():
@@ -25,7 +25,3 @@ def education_page():
 @mod_routing.route('/experience/', methods=['GET', 'POST'])
 def experience_page():
     return render_template("mod_routing/experience.html")
-
-@mod_routing.route('/download/resume/', methods=["GET", "POST"])
-def download_resume():
-    return send_file('files/taylorstjean_resume.pdf', as_attachment=True)
