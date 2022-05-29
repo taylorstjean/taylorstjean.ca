@@ -143,6 +143,42 @@ a.menu-button:link, a.menu-button:visited {
     margin: auto;
 }
 
+.input-form-1 {
+    width: 50%;
+    padding: 12px;
+    font-family: "Lato", "sans-serif";
+    font-size: 18px;
+}
+
+.input-submit {
+    width: 20%;
+    height: 4em;
+}
+
+.errors {
+    list-style-type: none;
+}
+
+.error-field {
+    font-family: "Lato", "sans-serif";
+    font-size: 18px;
+    color: #C20;
+}
+
+.input-label {
+    color: #222;
+    font-family: "Lato", "sans-serif";
+    font-size: 18px;
+}
+
+.input-form-2 {
+    padding: 12px;
+    width: 80%;
+    resize: none;
+    font-family: "Lato", "sans-serif";
+    font-size: 18px;
+}
+
 .download-button {
     width: 30px;
     margin: auto;
