@@ -1,5 +1,4 @@
-from flask import redirect, Blueprint, render_template, send_from_directory
-import os
+from flask import redirect, Blueprint, render_template
 
 mod_routing = Blueprint('routing', __name__)
 
