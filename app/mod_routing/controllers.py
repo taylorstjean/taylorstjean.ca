@@ -3,10 +3,6 @@ import os
 
 mod_routing = Blueprint('routing', __name__)
 
-@mod_routing.route('/robots.txt')
-def serve_robots():
-    return send_from_directory('static', 'robots.txt')
-
 @mod_routing.route('/', methods=["GET", "POST"])
 def redirect_to_landing():
     return redirect('/home/', 301)
