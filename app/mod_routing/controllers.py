@@ -28,4 +28,4 @@ def experience_page():
 
 @mod_routing.route('/download/resume/', methods=['GET'])
 def download_resume():
-    return send_file('static/files/taylorstjean_resume.pdf', as_attachment=True)
+    return send_file('static/files/taylorstjean_resume.pdf')
