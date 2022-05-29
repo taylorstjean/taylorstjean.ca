@@ -1,10 +1,10 @@
-from flask import redirect, Blueprint, render_template, send_file
+from flask import redirect, Blueprint, render_template, url_for
 
 mod_routing = Blueprint('routing', __name__)
 
 @mod_routing.route('/robots.txt', methods=["GET", "POST"])
 def data():
-    return send_file('static/web/robots.txt')
+    return url_for('static', filename='/web/robots.txt')
 
 @mod_routing.route('/', methods=["GET", "POST"])
 def redirect_to_landing():
