@@ -39,6 +39,33 @@
         <div class="main-content">
             <div class="master-column">
                 <div class="row">
+                    <form method="POST" class="content column">
+                        <h2>
+                            Send a Message
+                        </h2>
+                        <p>
+                            Feel free to send me a message! I will respond to the email provided as soon as possible.
+                        </p>
+                        {{ form.hidden_tag() }}
+                        {% if form.email.errors %}
+                            <ul class="errors">
+                            {% for error in form.email.errors %}
+                                <li class="error-field">{{ error }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                        <br>
+                        {{ form.name.label(class="input-label") }}
+                        {{ form.name(class="input-form-1") }}<br>
+                        {{ form.email.label(class="input-label") }}
+                        {{ form.email(class="input-form-1") }}<br>
+                        {{ form.message.label(class="input-label") }}
+                        {{ form.message(class="input-form-2", rows=6) }}<br>
+                        {{ form.recaptcha() }}<br>
+                        {{ form.send(class="input-submit") }}
+                    </form>
+                </div>
+                <div class="row">
                     <div class="content column">
                         <h2 class='title'>Email</h2>
                         <p>I do not have a public phone number, however please feel free to send me an email at <span><a href="mailto: contact@taylorstjean.ca">contact@taylorstjean.ca</a></span>.<br><br>I usually respond within 24 hours.</p>
