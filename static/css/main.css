@@ -1,7 +1,9 @@
 html {
-    background: #e6e9e9;
-    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    background-image: url('https://taylorstjean.ca/static/img/background.jpg');
     -webkit-font-smoothing: antialiased;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .menu {
@@ -28,7 +30,7 @@ h1.title {
 }
 
 .content {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.82);
     box-shadow: 2px 2px rgba(0, 0, 0, 0.06);
     color: #545454;
     font-family: "Lato", sans-serif;
@@ -71,6 +73,8 @@ p, li {
 
 #foot {
     font-size: 12px;
+    font-family: "Lato", "sans-serif";
+    color: #fff;
 }
 
 .menu-box {
@@ -148,11 +152,16 @@ a.menu-button:link, a.menu-button:visited {
     padding: 12px;
     font-family: "Lato", "sans-serif";
     font-size: 18px;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
 }
 
 .input-submit {
     width: 20%;
     height: 4em;
+    font-size: 14px;
+    font-family: "Lato", "sans-serif";
 }
 
 .errors {
@@ -177,6 +186,9 @@ a.menu-button:link, a.menu-button:visited {
     resize: none;
     font-family: "Lato", "sans-serif";
     font-size: 18px;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 10px;
 }
 
 .download-button {
@@ -257,6 +269,18 @@ a.menu-button:hover {
 
 .active {
     color: grey;
+}
+
+a.attrib-link:link, a.attrib-link:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a.attrib-link:hover, a.attrib-link:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
 }
 
 @keyframes colorize {
