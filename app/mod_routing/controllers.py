@@ -34,8 +34,15 @@ def contact_page():
         server.starttls()
         server.login("automated@taylorstjean.ca", password="redacted")
         server.sendmail("automated@taylorstjean.ca", ["contact@taylorstjean.ca"], msg.as_string())
+        
+        return redirect('/form-submit/', 301)
 
     return render_template("mod_routing/contactme.html", form=form)
+
+
+@mod_routing.route('/form-submit/', methods=["GET"])
+def form_submit_page():
+    return render_template("mod_routing/form_submit.html")
 
 
 @mod_routing.route('/education/', methods=['GET', 'POST'])
