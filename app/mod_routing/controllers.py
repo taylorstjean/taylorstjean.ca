@@ -1,4 +1,4 @@
-from flask import redirect, Blueprint, render_template
+from flask import redirect, Blueprint, render_template, request
 from app.mod_routing.forms import ContactForm
 import smtplib
 from email.mime.text import MIMEText
@@ -34,7 +34,7 @@ def contact_page():
         server.starttls()
         server.login("automated@taylorstjean.ca", password="redacted")
         server.sendmail("automated@taylorstjean.ca", ["contact@taylorstjean.ca"], msg.as_string())
-        
+
         return redirect('/form-submit/', 301)
 
     return render_template("mod_routing/contactme.html", form=form)

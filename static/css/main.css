@@ -1,9 +1,28 @@
 html {
-    background-image: url('https://taylorstjean.ca/static/img/background.jpg');
     -webkit-font-smoothing: antialiased;
+}
+
+#background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    margin: 0;
+    background-image: url('https://taylorstjean.ca/static/img/background.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+}
+
+.ctr {
+    margin: auto;
 }
 
 .menu {
@@ -11,12 +30,11 @@ html {
     box-shadow: 2px 2px rgba(0, 0, 0, 0.06);
     color: #545454;
     font-family: "Lato", sans-serif;
-    font-size: 18px;
     line-height: 1.5;
     margin: 0 auto;
     z-index: 1;
     padding: 0 2em;
-    min-width: 500px;
+    min-width: 300px;
     position: fixed;
     top: 0;
     left: 50%;
@@ -26,7 +44,14 @@ html {
 
 h1.title {
     text-align: left;
-    padding-left: 30px;
+    padding-left: 60px;
+}
+
+@media screen and (max-width: 800px) {
+    h1.title {
+        text-align: center;
+        padding-left: 0;
+    }
 }
 
 .content {
@@ -80,7 +105,7 @@ p, li {
 .menu-box {
     padding: 0;
     margin: 20px auto;
-    width: 100%
+    width: 90%
 }
 
 .menu-cont {
@@ -93,6 +118,7 @@ p, li {
 .menu-text {
     white-space: nowrap;
     margin: 0 auto;
+    font-size: min(2.5vw, 20px);
 }
 
 .center-box {
@@ -124,6 +150,13 @@ p, li {
     display: flex;
     flex-direction: column;
     flex: 2;
+    max-width: 1000px;
+}
+
+.triple-row {
+    display: flex;
+    flex-direction: row;
+    flex: 3;
     max-width: 1000px;
 }
 
@@ -234,16 +267,22 @@ a.menu-button:hover {
     padding: 23px;
     margin: 0 10px;
     font-size: 40px;
-    width: 19px;
-    height: 19px;
+    width: min(5vw, 21px);
+    height: min(5vw, 21px);
     border-radius: 50%;
     text-align: center;
     text-decoration: none;
 }
 
+@media screen and (max-width: 800px) {
+    .fa {
+        margin: 0 0.5vw;
+    }
+}
+
 .fa:hover {
     opacity: 0.7;
-    padding: 21px;
+    padding: min(5vw, 21px);
     border: 2px solid white;
 }
 
@@ -259,7 +298,7 @@ a.menu-button:hover {
 
 .fa-spotify {
     color: white;
-    background: rgb(30,215,96);   
+    background: rgb(30,215,96);
 }
 
 .fa-github {
